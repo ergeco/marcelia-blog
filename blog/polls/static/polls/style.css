@@ -1,0 +1,237 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+a {
+    text-decoration: None;
+}
+
+
+.post_maker {
+    margin-left: 225px;
+    margin-right: 225px;
+
+}
+
+.posts {
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #bdcee2;
+    margin-left: 25px;
+    margin-right: 40%;
+    padding: 10px;
+    padding-top: 10px;
+}
+
+.post_text textarea {
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 98%;
+    height: 350px;
+    resize: None;
+}
+
+.post_title a {
+    text-decoration: None:
+    padding-top: 5px;
+    color: black;
+
+}
+
+.right_theme {
+    float: right;
+    padding: 5px;
+}
+
+.post_theme a {
+    text-decoration: None;
+    color: blue;
+}
+
+.post_post_data p {
+    padding: 5px;
+    text-decoration: None;
+    color: blue;
+}
+
+.right_share {
+    float: right;
+}
+
+.share_post  a {
+    text-decoration: None;
+    color: blue;
+}
+
+.share_post p {
+    padding: 5px;
+}
+
+.post_hash_tags p {
+    padding: 5px;
+
+}
+
+.post_hash_tags a {
+    text-decoration: None;
+    color: blue;
+}
+
+.delete_post p {
+    padding: 5px;
+}
+
+.delete_post a {
+    text-decoration: None;
+    color: blue;
+}
+
+body {
+    background-color: #f7e2f7;
+}
+.head {
+    margin-left: 10px;
+    margin-right:10px;
+    padding-top: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header_head{
+    width: 100%;
+    max-width: 1470px;
+    margin: 0;
+    color: black;
+    text-decoration: None;
+    background-color: #bdcee2;
+
+}
+
+header a {
+    color: black;
+}
+
+.beautiful_hren {
+    width: 100%;
+    max-width: 1470px;
+    height: 100px;
+    background-image: url('https://oir.mobi/uploads/posts/2022-08/1661405554_3-oir-mobi-p-fon-profilya-dlya-diskorda-krasivo-3.jpg')
+
+
+}
+
+.nadpis {
+    padding-top: 40px;
+    color: white;
+    font-size: 32px;
+
+}
+
+.text-typing
+{
+    width: 45em;
+    color: white;
+    font-size: 22px;
+    font-family: 'Times New Roman';
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-animation: type 5s steps(50, end);
+    animation: type 5s steps(50, end);
+}
+@keyframes type{
+    from { width: 0; }
+}
+
+@-webkit-keyframes type{
+    from { width: 0; }
+}
+
+
+
+.create_post_form {
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #bdcee2;
+    margin-left: 225px;
+    margin-right: 225px;
+    padding: 10px;
+    padding-top: 10px;
+    width: 100% - 225px;
+}
+
+.create_post_form input {
+    padding: 4px;
+    width: 98%;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.create_post_title {
+    padding-top: 10px;
+}
+
+.create_post_theme {
+    padding-top: 10px;
+}
+
+.create_post_hash_tags {
+    padding-top: 10px;
+}
+
+.create_post_text {
+    padding-top: 10px;
+}
+
+.create_post_text textarea{
+    padding-top: 10px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 98%;
+    height: 300px;
+    resize: None;
+}
+
+.create_post_submit_button {
+    padding-top: 10px;
+}
+
+.create_post_submit_button button{
+    display: block;
+    margin-left: 250px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+
+.post_maker a {
+    text-decoration: None;
+    color: blue;
+}
+
+.history {
+    float: right;
+    padding: 5px;
+    margin-right: 25px;
+    width: 25%;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #bdcee2;
+}
+
+.history_text textarea {
+
+    height: 150px;
+    resize: None;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 95%;
+}

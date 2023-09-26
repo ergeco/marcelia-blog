@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="{% static 'polls/style.css' %}">
+    <meta charset="UTF-8">
+
+
+    <title>Мой Блог</title>
+</head>
+<body>
+<header>
+    <div class="header_head">
+        <nav class="head">
+            <h1><a href="/burkoff_blog">Блог</a></h1>
+            <h1><a href="team">Команда</a></h1>
+            <h1><a href="contacts">Мои контакты</a></h1>
+            <h1><a href="support">Поддержка</a></h1>
+            <h1><a href="my_progress">Прогресс</a></h1>
+        </nav>
+
+    </div>
+</header>
+<div class="beautiful_hren">
+    <nav class="nadpis">
+        <p class="text-typing" align="center">Добро пожаловать!!!</p>
+    </nav>
+</div>
+
+<p><a href="#">Поддержать автора</a></p>
+
+
+
+
+
+
+{% if request.user.is_authenticated %}
+<p>hi ^_^!</p>
+
+<div class="post_maker">
+    <p><a href="create_post">Создать пост</a></p>
+    <p><a href="create_history">Создать историю</a></p>
+</div>
+
+
+{% else %}
+{% endif %}
+
+{% for hist in history %}
+<aside class="history">
+    <h1>{{ hist.date|date:"d.m.Y" }}</h1>
+    <div class="history_text">
+        <textarea readonly>{{ hist.text }}</textarea>
+    </div>
+</aside>
+{% endfor %}
+
+
+{% for post in some_posts %}
+<div class="posts">
+    <div class="post_title">
+        <h2><a href="{% url 'just_redact' post.id %}">{{ post.title }}</a></h2>
+    </div>
+    <aside class="right_theme">
+        <div class="post_theme">
+            <p><a href="#">Тема: {{ post.theme }}</a></p>
+        </div>
+    </aside>
+    <div class="post_hash_tags">
+        <p><a href="my_progress">#{{ post.hash_tags }}</a></p>
+    </div>
+
+    <div class="post_text">
+        <textarea readonly>{{ post.text }}</textarea>
+    </div>
+    <aside class="right_share">
+        <div class="share_post">
+            <p><a href="#">Поделиться</a></p>
+        </div>
+    </aside>
+    <div class="post_post_data">
+        <p>{{ post.post_date|date:"d.m.Y" }}</p>
+    </div>
+    {% if request.user.is_authenticated %}
+    <div class="delete_post">
+        <p><a href="{% url 'delete_post' post.id %}">Удалить</a></p>
+    </div>
+    {% endif %}
+</div>
+{% endfor %}
+
+
+
+</body>
+</html>

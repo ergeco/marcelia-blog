@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактирование поста</title>
+</head>
+<body>
+{% if request.user.is_authenticated %}
+
+{% for post in posts %}
+<form method="post" action="{% url 'redacting' post.id %}">
+    {% csrf_token %}
+    <div class="redact_post_form">
+        <div class="redact_post_title">
+            <textarea typeof="text" name="title">{{ post.title }}</textarea>
+        </div>
+        <div class="redact_post_theme">
+            <textarea typeof="text" name="theme">{{ post.theme }}</textarea>
+        </div>
+        <div class="redact_post_hash_tags">
+            <textarea typeof="text" name="hash_tags">{{ post.hash_tags }}</textarea>
+        </div>
+        <div class="redact_post_text">
+            <textarea typeof="text" name="text">{{ post.text }}</textarea>
+        </div>
+        <div class="redact_post_date">
+            <input type="date" name="post_date">
+        </div>
+        <div class="redact_post_submit_button">
+            <button class="simple_submit_button" type="submit">Готово</button>
+        </div>
+    </div>
+</form>
+{% endfor %}
+
+{% endif %}
+</body>
+</html>

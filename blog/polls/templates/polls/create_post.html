@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="{% static 'polls/style.css' %}">
+    <title>Создание поста</title>
+</head>
+<body>
+{% if request.user.is_authenticated %}
+
+<div class="create_post_h1">
+    <h1 align="center">Создание поста</h1>
+</div>
+
+<form method="post" action="creating">
+    {% csrf_token %}
+    <div class="create_post_form">
+        <div class="create_post_title">
+            <input type="text" placeholder="Поле для названия" name="title">
+        </div>
+        <div class="create_post_theme">
+            <input type="text" placeholder="Поле для темы" name="theme">
+        </div>
+        <div class="create_post_hash_tags">
+            <input type="text" placeholder="Поле для хэштэгов" name="hash_tags">
+        </div>
+        <div class="create_post_text">
+            <textarea typeof="text" placeholder="Поле для ввода текста" name="text"></textarea>
+        </div>
+        <div class="create_post_submit_button">
+            <button class="simple_submit_button" type="submit">Готово</button>
+        </div>
+    </div>
+</form>
+
+{% endif %}
+
+
+
+</body>
+</html>
