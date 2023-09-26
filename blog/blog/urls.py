@@ -4,6 +4,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('marcelia.netlify.app', include('polls.urls')),
+    path('marcelia', include('polls.urls')),
 
 ]
