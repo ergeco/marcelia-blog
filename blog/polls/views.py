@@ -83,9 +83,6 @@ def contacts(request):
 def support(request):
     return render(request, 'polls/support.html')
 
-def team(request):
-    return render(request, 'polls/team.html')
-
 def create_history(request):
     return render(request, 'polls/create_history.html')
 

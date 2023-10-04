@@ -11,7 +11,6 @@ urlpatterns = [
     path('my_progress', views.my_progress, name='my_progress'),
     path('contacts', views.contacts, name='contacts'),
     path('support', views.support, name='support'),
-    path('team', views.team, name='team'),
     path('create_history', views.create_history, name='create_history'),
     path('crhis', views.crhis, name='crhis'),
 
