@@ -9,7 +9,7 @@ def index(request):
 
     # В общем истории еще продумать
 
-    hist = HistoryNews.objects.all().order_by('-date')[:1]
+    hist = HistoryNews.objects.all().order_by('-date')[:2]
 
 
     donations = DonationPeople.objects.all()
